@@ -3,57 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaber - برنامج رياضي</title>
+    <title>Jaber Pro | تطبيق رياضي احترافي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>🏋️‍♂️ Jaber Gym</h1>
-        <nav>
-            <a href="#exercises">التمارين</a>
-            <a href="#program">البرنامج</a>
-            <a href="#progress">التقدم</a>
-        </nav>
-    </header>
+    <!-- Background Effects -->
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
 
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo">💪</span>
+            <span class="brand-text">Jaber<span class="pro">Pro</span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link active">
+                <span class="icon">🏠</span>
+                <span class="text">الرئيسية</span>
+            </a>
+            <a href="#exercises" class="nav-link">
+                <span class="icon">🎯</span>
+                <span class="text">التمارين</span>
+            </a>
+            <a href="#program" class="nav-link">
+                <span class="icon">📅</span>
+                <span class="text">البرنامج</span>
+            </a>
+            <a href="#stats" class="nav-link">
+                <span class="icon">📊</span>
+                <span class="text">الإحصائيات</span>
+            </a>
+        </div>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <!-- Main Content -->
     <main>
-        <!-- تمارين -->
-        <section id="exercises">
-            <h2>📋 تمارين رياضية</h2>
-            <div class="filters">
-                <button onclick="filterExercises('all')">الكل</button>
-                <button onclick="filterExercises('chest')">صدر</button>
-                <button onclick="filterExercises('back')">ظهر</button>
-                <button onclick="filterExercises('legs')">أرجل</button>
-                <button onclick="filterExercises('core')">بطن</button>
-            </div>
-            <div id="exercises-list" class="grid"></div>
-        </section>
-
-        <!-- برنامج 30 يوم -->
-        <section id="program">
-            <h2>📅 برنامج 30 يوم</h2>
-            <div id="program-list" class="program-grid"></div>
-        </section>
-
-        <!-- تتبع -->
-        <section id="progress">
-            <h2>📊 تتبع التقدم</h2>
-            <div class="stats">
-                <div class="stat-card">
-                    <span id="days-completed">0</span>
-                    <label>أيام مكتملة</label>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse">🔥</span>
+                    <span>برنامج 30 يوم</span>
                 </div>
+                
+                <h1 class="hero-title">
+                    <span class="gradient-text">حوّل</span> جسمك
+                    <br>
+                    <span class="outline">إلى قوة</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    تطبيق رياضي احترافي مع تمارين Calisthenics متكاملة
+                    <br>
+                    وفيديوهات توضيحية وبرنامج تدريبي ذكي
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('exercises')">
+                        <span>🚀 ابدأ التمرين</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('program')">
+                        <span>📋 البرنامج</span>
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">30</span>
+                        <span class="stat-label">يوم</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">تمرين</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">مجاني</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <span class="card-icon">🔥</span>
+                    <span class="card-text">+15 تمرين</span>
+                </div>
+                <div class="floating-card card-2">
+                    <span class="card-icon">💪</span>
+                    <span class="card-text">فيديو توضيحي</span>
+                </div>
+                <div class="floating-card card-3">
+                    <span class="card-icon">⭐</span>
+                    <span class="card-text">4.9/5</span>
+                </div>
+                
+                <div class="hero-illustration">
+                    <div class="circle-gradient"></div>
+                    <div class="dumbbell-icon">🏋️‍♂️</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercises Section -->
+        <section id="exercises" class="exercises-section">
+            <div class="section-header">
+                <span class="section-badge">🎯</span>
+                <h2>مكتبة التمارين</h2>
+                <p>اختر العضلة وابدأ التمرين</p>
+            </div>
+            
+            <div class="muscle-tabs">
+                <button class="tab-btn active" data-muscle="all">
+                    <span class="tab-icon">🎯</span>
+                    <span>الكل</span>
+                </button>
+                <button class="tab-btn" data-muscle="chest">
+                    <span class="tab-icon">💪</span>
+                    <span>صدر</span>
+                </button>
+                <button class="tab-btn" data-muscle="back">
+                    <span class="tab-icon">🔙</span>
+                    <span>ظهر</span>
+                </button>
+                <button class="tab-btn" data-muscle="legs">
+                    <span class="tab-icon">🦵</span>
+                    <span>أرجل</span>
+                </button>
+                <button class="tab-btn" data-muscle="core">
+                    <span class="tab-icon">🎯</span>
+                    <span>بطن</span>
+                </button>
+                <button class="tab-btn" data-muscle="arms">
+                    <span class="tab-icon">💪</span>
+                    <span>أذرع</span>
+                </button>
+            </div>
+            
+            <div class="exercises-grid" id="exercises-grid">
+                <!-- Exercises will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Program Section -->
+        <section id="program" class="program-section">
+            <div class="section-header">
+                <span class="section-badge">📅</span>
+                <h2>برنامج 30 يوم</h2>
+                <p>اتبع البرنامج واحقق أهدافك</p>
+            </div>
+            
+            <div class="program-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="completed-days">0</span> / 30 يوم مكتمل
+                </div>
+            </div>
+            
+            <div class="program-calendar" id="program-calendar">
+                <!-- Days will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats-section">
+            <div class="section-header">
+                <span class="section-badge">📊</span>
+                <h2>إحصائياتك</h2>
+                <p>تتبع تقدمك وإنجازاتك</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card large">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-value" id="total-workouts">0</div>
+                    <div class="stat-label">تمارين منجزة</div>
+                </div>
+                
                 <div class="stat-card">
-                    <span id="total-workouts">0</span>
-                    <label>تمارين</label>
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-value" id="streak-days">0</div>
+                    <div class="stat-label">أيام متتالية</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-value" id="total-minutes">0</div>
+                    <div class="stat-label">دقيقة تمرين</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">💪</div>
+                    <div class="stat-value" id="muscle-count">0</div>
+                    <div class="stat-label">عضلة مستهدفة</div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>💪 By Jaber | برنامج رياضي متكامل</p>
+    <!-- Exercise Modal -->
+    <div class="modal" id="exercise-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close">✕</button>
+            
+            <div class="modal-header">
+                <span class="modal-muscle" id="modal-muscle"></span>
+                <h3 id="modal-title"></h3>
+            </div>
+            
+            <div class="modal-video">
+                <video id="modal-video" controls loop>
+                    <source src="" type="video/mp4">
+                    متصفحك لا يدعم الفيديو
+                </video>
+            </div>
+            
+            <div class="modal-info">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">المستوى</span>
+                        <span class="info-value" id="modal-difficulty"></span>
+                    </div>
+                    
+                    <div class="info-item">
+                        <span class="info-label">العضلة المستهدفة</span>
+                        <span class="info-value" id="modal-target"></span>
+                    </div>
+                </div>
+                
+                <p class="modal-description" id="modal-description"></p>
+                
+                <div class="modal-instructions">
+                    <h4>🔥 طريقة التنفيذ:</h4>
+                    <ol id="modal-steps"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo">💪</span>
+                <span>JaberPro</span>
+            </div>
+            
+            <p>صنع بـ❤️ بواسطة Jaber</p>
+            
+            <p class="footer-copy">© 2026 جميع الحقوق محفوظة</p>
+        </div>
     </footer>
 
     <script src="js/app.js"></script>
