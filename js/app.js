@@ -1,6 +1,6 @@
-// ===== FreeGym Pro Max - Ultimate Fitness App =====
+// ===== FreeGym Zero to Expert - Ultimate Endurance Protocol =====
 
-// 🎯 بيانات التمارين - الفيديوهات كتخدمو دابا!
+// 🎯 تمارين جديدة للبرنامج القوي
 const exercises = [
     {
         id: 1,
@@ -10,17 +10,10 @@ const exercises = [
         muscleAr: "الصدر",
         difficulty: "easy",
         difficultyAr: "سهل",
-        description: "تمرين أساسي للصدر والأكتاف والترايسبس. يقوي الجزء العلوي من الجسم.",
+        description: "تمرين أساسي للصدر والأكتاف والترايسبس.",
         video: "./videos/squat.mp4",
-        poster: "💪",
         icon: "💪",
-        steps: [
-            "استلقِ على بطنك مع وضع يديك بعرض الكتفين",
-            "حافظ على جسمك مستقيماً كاللوح",
-            "انزل ببطء حتى يلامس صدرك الأرض تقريباً",
-            "ادفع للأعلى بقوة مع الحفاظ على التقنية",
-            "كرر 10-15 مرة في 3 جولات"
-        ]
+        steps: ["استلقِ على بطنك", "ادفع جسمك للأعلى", "انزل ببطء", "كرر 10-15 مرة"]
     },
     {
         id: 2,
@@ -30,17 +23,10 @@ const exercises = [
         muscleAr: "البطن",
         difficulty: "easy",
         difficultyAr: "سهل",
-        description: "تمرين ثبات ممتاز للبطن والظهر. يقوي العمود الفقري ويحسن الوضعية.",
+        description: "تمرين ثبات للبطن والظهر.",
         video: "./videos/plank.mp4",
-        poster: "🎯",
         icon: "🎯",
-        steps: [
-            "استند على الساعدين وأطراف الأصابع",
-            "حافظ على جسمك في خط مستقيم من الرأس للكعبين",
-            "شد عضلات بطنك ولا تدع ظهرك ينحني",
-            "تنفس بشكل طبيعي ولا تحبس أنفاسك",
-            "استمر 30-60 ثانية"
-        ]
+        steps: ["استند على الساعدين", "حافظ على استقامة الجسم", "شد البطن", "استمر 30-60 ثانية"]
     },
     {
         id: 3,
@@ -50,167 +36,155 @@ const exercises = [
         muscleAr: "الأرجل",
         difficulty: "easy",
         difficultyAr: "سهل",
-        description: "ملك تمارين الأرجل. يستهدف الفخذين والأرداف ويعزز القوة الوظيفية.",
+        description: "ملك تمارين الأرجل.",
         video: "./videos/squat.mp4",
-        poster: "🦵",
         icon: "🦵",
-        steps: [
-            "قف مع فرد القدمين بعرض الكتفين",
-            "انزل للأسفل كأنك تجلس على كرسي وهمي",
-            "احافظ على ركبتين لا تتجاوزان أصابع القدمين",
-            "ادر للأعلى بقوة من الكعبين",
-            "كرر 15-20 مرة في 3 جولات"
-        ]
+        steps: ["قف بعرض الكتفين", "انزل كأنك تجلس", "ادر للأعلى", "كرر 15-20 مرة"]
     },
     {
         id: 4,
+        name: "الجرى",
+        nameEn: "Running",
+        muscle: "cardio",
+        muscleAr: "كارديو",
+        difficulty: "medium",
+        difficultyAr: "متوسط",
+        description: "جري للتحمل والقلب.",
+        video: "./videos/squat.mp4",
+        icon: "🏃",
+        steps: ["ابدأ ببطء", "حافظ على إيقاع", "تنفس بشكل منتظم", "زود السرعة تدريجياً"]
+    },
+    {
+        id: 5,
+        name: "البرابيز",
+        nameEn: "Burpees",
+        muscle: "full",
+        muscleAr: "كامل الجسم",
+        difficulty: "hard",
+        difficultyAr: "صعب",
+        description: "تمرين متكامل قوي جداً.",
+        video: "./videos/squat.mp4",
+        icon: "🔥",
+        steps: ["قف مستقيماً", "انزل لوضعية الضغط", "ادفع واقفز", "كرر بسرعة"]
+    },
+    {
+        id: 6,
+        name: "سحب عالي",
+        nameEn: "Pull-ups",
+        muscle: "back",
+        muscleAr: "الظهر",
+        difficulty: "hard",
+        difficultyAr: "صعب",
+        description: "تمرين قوي للظهر.",
+        video: "./videos/bicep.mp4",
+        icon: "🔙",
+        steps: ["امسك العقلة", "اسحب جسمك للأعلى", "انزل ببطء", "كرر 5-10 مرات"]
+    },
+    {
+        id: 7,
         name: "الغطس",
         nameEn: "Dips",
         muscle: "chest",
         muscleAr: "الصدر",
         difficulty: "medium",
         difficultyAr: "متوسط",
-        description: "تمرين رائع للصدر السفلي والترايسبس. يمكن تنفيذه بين كرسيين.",
+        description: "للصدر السفلي والترايسبس.",
         video: "./videos/squat.mp4",
-        poster: "📉",
         icon: "📉",
-        steps: [
-            "ضع يديك على حافتين متوازيتين (كرسيين)",
-            "انزل ببطء بثني المرفقين إلى 90 درجة",
-            "حافظ على ظهرك قريباً من الحافة",
-            "ادفع للأعلى حتى تفرد الذراعين",
-            "كرر 8-12 مرة في 3 جولات"
-        ]
+        steps: ["ضع يديك على حافة", "انزل بثني المرفقين", "ادفع للأعلى", "كرر 8-12 مرة"]
     },
     {
-        id: 5,
-        name: "رفع الأرجل",
-        nameEn: "Leg Raises",
-        muscle: "core",
-        muscleAr: "البطن",
-        difficulty: "medium",
-        difficultyAr: "متوسط",
-        description: "يستهدف العضلات السفلية للبطن بفعالية. يحتاج لقوة وتحكم.",
-        video: "./videos/plank.mp4",
-        poster: "🦵",
-        icon: "🦵",
-        steps: [
-            "استلقِ على ظهرك مع تمديد الأرجل",
-            "ضع يديك تحت الأرداف للدعم",
-            "ارفع أرطلك للأعلى بشكل مستقيم",
-            "انزل ببطء دون لمس الأرض",
-            "كرر 10-15 مرة"
-        ]
-    },
-    {
-        id: 6,
-        name: "تمرين البايسبس",
-        nameEn: "Bicep Curls",
-        muscle: "arms",
-        muscleAr: "الأذرع",
-        difficulty: "easy",
-        difficultyAr: "سهل",
-        description: "تمرين كلاسيكي لتضخيم عضلة البايسبس الأمامية.",
-        video: "./videos/bicep.mp4",
-        poster: "💪",
-        icon: "💪",
-        steps: [
-            "قف مع دمبل في كل يد (أو أي وزن متاح)",
-            "حافظ على مرفقيك ثابتين بجانب الجسم",
-            "اثنِ المرفقين وارفع الوزن نحو الكتفين",
-            "ركز على شد البايسبس في القمة",
-            "انزل ببطء وكرر 12-15 مرة"
-        ]
-    },
-    {
-        id: 7,
+        id: 8,
         name: "خطوة الأمام",
         nameEn: "Lunges",
         muscle: "legs",
         muscleAr: "الأرجل",
         difficulty: "easy",
         difficultyAr: "سهل",
-        description: "تمرين رائع للفخذ الأمامي والتوازن. يعمل على كل رجل على حدة.",
+        description: "للأرجل والتوازن.",
         video: "./videos/squat.mp4",
-        poster: "🚶",
         icon: "🚶",
-        steps: [
-            "خطوة كبيرة للأمام بقدم واحدة",
-            "انزل حتى ركبتك الخلفية تقرب من الأرض",
-            "تأكد من أن ركبتك الأمامية لا تتجاوز أصابع القدم",
-            "ادفع للأعلى وعد للوضعية الأصلية",
-            "كرر 10 مرات لكل رجل"
-        ]
+        steps: ["خطوة للأمام", "انزل للأسفل", "ادر للأعلى", "بدل الأرجل"]
     },
     {
-        id: 8,
-        name: "متسلق الجبال",
-        nameEn: "Mountain Climbers",
-        muscle: "core",
-        muscleAr: "البطن",
+        id: 9,
+        name: "الحبل",
+        nameEn: "Jump Rope",
+        muscle: "cardio",
+        muscleAr: "كارديو",
         difficulty: "medium",
         difficultyAr: "متوسط",
-        description: "تمرين كارديو ممتاز للبطن يحسن التحمل والقوة.",
+        description: "للتحمل والتنسيق.",
         video: "./videos/plank.mp4",
-        poster: "🏔️",
-        icon: "🏔️",
-        steps: [
-            "خذ وضعية الضغط مع استقامة الجسم",
-            "اجلب ركبتك اليمنى باتجاه الصدر",
-            "بدل بسرعة مع إرجاع الركبة اليمنى وإحضار اليسرى",
-            "حافظ على إيقاع سريع ومستقر",
-            "استمر 30-45 ثانية"
-        ]
+        icon: "➰",
+        steps: ["امسك الحبل", "اقفز بإيقاع", "حافظ على السرعة", "استمر 5-10 دقائق"]
+    },
+    {
+        id: 10,
+        name: "المشي بثقل",
+        nameEn: "Ruck March",
+        muscle: "full",
+        muscleAr: "كامل الجسم",
+        difficulty: "medium",
+        difficultyAr: "متوسط",
+        description: "مشي مع حقيبة ثقيلة.",
+        video: "./videos/squat.mp4",
+        icon: "🎒",
+        steps: ["ضع حقيبة 5-10kg", "امشِ بخطوات ثابتة", "حافظ على وضعية مستقيمة", "استمر 30-60 دقيقة"]
     }
 ];
 
-// 📅 برنامج 30 يوم منطقي ومتدرج
+// 📅 برنامج Zero to Expert - 30 يوم صعب!
 const program = [
-    // الأسبوع 1: الأساسيات
-    { day: 1, name: "يوم الضغط", type: "push", exercises: ["Push-ups"], sets: "3x10", week: 1, color: "#ff6b6b" },
-    { day: 2, name: "يوم البطن", type: "core", exercises: ["Plank"], sets: "3x30s", week: 1, color: "#ff6b6b" },
-    { day: 3, name: "راحة", type: "rest", exercises: ["مشي"], sets: "20min", week: 1, color: "#95e1d3" },
-    { day: 4, name: "يوم الأرجل", type: "legs", exercises: ["Squats"], sets: "3x15", week: 1, color: "#ff6b6b" },
-    { day: 5, name: "يوم الذراع", type: "arms", exercises: ["Bicep Curls"], sets: "3x12", week: 1, color: "#ff6b6b" },
-    { day: 6, name: "تمرين كامل", type: "full", exercises: ["Push-ups", "Squats"], sets: "3x10", week: 1, color: "#ff6b6b" },
-    { day: 7, name: "راحة", type: "rest", exercises: ["استرخاء"], sets: "-", week: 1, color: "#95e1d3" },
+    // Week 1: Foundation (2 Sessions/Day)
+    { day: 1, name: "اليوم 1", session1: "30min Slow Jog", session2: "100 Pushups + 100 Squats", week: 1, color: "#4ade80", sessions: 2 },
+    { day: 2, name: "اليوم 2", session1: "45min Brisk Walk", session2: "15min Plank (Accumulated)", week: 1, color: "#4ade80", sessions: 2 },
+    { day: 3, name: "اليوم 3", session1: "30min Slow Jog", session2: "5 Rounds: 10 Burpees, 20 Lunges", week: 1, color: "#4ade80", sessions: 2 },
+    { day: 4, name: "اليوم 4", session1: "Active Recovery", session2: "Stretch/Walk", week: 1, color: "#95e1d3", sessions: 0 },
+    { day: 5, name: "اليوم 5", session1: "40min Run (Steady)", session2: "150 Air Squats", week: 1, color: "#4ade80", sessions: 2 },
+    { day: 6, name: "اليوم 6", session1: "45min Walk w/ 5kg", session2: "Max Pushups in 10min", week: 1, color: "#4ade80", sessions: 2 },
+    { day: 7, name: "راحة", session1: "Rest", session2: "Rest", week: 1, color: "#95e1d3", sessions: 0 },
     
-    // الأسبوع 2: بناء القوة
-    { day: 8, name: "صدر متقدم", type: "push", exercises: ["Push-ups", "Dips"], sets: "4x12", week: 2, color: "#ffd93d" },
-    { day: 9, name: "بطن قوي", type: "core", exercises: ["Plank", "Leg Raises"], sets: "4x40s", week: 2, color: "#ffd93d" },
-    { day: 10, name: "HIIT", type: "cardio", exercises: ["Mountain Climbers"], sets: "20min", week: 2, color: "#ffd93d" },
-    { day: 11, name: "أرجل القوة", type: "legs", exercises: ["Squats", "Lunges"], sets: "4x15", week: 2, color: "#ffd93d" },
-    { day: 12, name: "أذرع حديدية", type: "arms", exercises: ["Bicep Curls"], sets: "4x15", week: 2, color: "#ffd93d" },
-    { day: 13, name: "تمرين مكثف", type: "full", exercises: ["Push-ups", "Squats", "Plank"], sets: "4x12", week: 2, color: "#ffd93d" },
-    { day: 14, name: "استشفاء", type: "rest", exercises: ["تمدد"], sets: "30min", week: 2, color: "#95e1d3" },
+    // Week 2: The Ramp Up (3 Sessions/Day)
+    { day: 8, name: "اليوم 8", session1: "5km Run", session2: "100 Pullups (Total)", session3: "30min Stretching", week: 2, color: "#fbbf24", sessions: 3 },
+    { day: 9, name: "اليوم 9", session1: "HIIT: 30s Sprint/30s Rest (20min)", session2: "200 Pushups", session3: "Core Circuit (20min)", week: 2, color: "#fbbf24", sessions: 3 },
+    { day: 10, name: "اليوم 10", session1: "45min Ruck (10kg)", session2: "100 Dips", session3: "Leg Mobility", week: 2, color: "#fbbf24", sessions: 3 },
+    { day: 11, name: "راحة", session1: "Rest", session2: "Rest", session3: "Rest", week: 2, color: "#95e1d3", sessions: 0 },
+    { day: 12, name: "اليوم 12", session1: "6km Run", session2: "Bodyweight Circuit (30min)", session3: "Yoga/Stretch", week: 2, color: "#fbbf24", sessions: 3 },
+    { day: 13, name: "اليوم 13", session1: "Hill Sprints (15min)", session2: "200 Squats", session3: "10min Plank", week: 2, color: "#fbbf24", sessions: 3 },
+    { day: 14, name: "اليوم 14", session1: "Long Hike (90min)", session2: "Rest", session3: "Foam Roll/Stretch", week: 2, color: "#fbbf24", sessions: 1 },
     
-    // الأسبوع 3: التحمل
-    { day: 15, name: "صدر التحمل", type: "push", exercises: ["Push-ups", "Dips"], sets: "5x15", week: 3, color: "#6bcf7f" },
-    { day: 16, name: "بطن الصخر", type: "core", exercises: ["Plank", "Leg Raises", "Mountain Climbers"], sets: "5x45s", week: 3, color: "#6bcf7f" },
-    { day: 17, name: "كارديو", type: "cardio", exercises: ["قفز"], sets: "25min", week: 3, color: "#6bcf7f" },
-    { day: 18, name: "أرجل محارب", type: "legs", exercises: ["Squats", "Lunges"], sets: "5x20", week: 3, color: "#6bcf7f" },
-    { day: 19, name: "تدمير الأذرع", type: "arms", exercises: ["Bicep Curls"], sets: "5x20", week: 3, color: "#6bcf7f" },
-    { day: 20, name: "تمرين قاتل", type: "full", exercises: ["الكل"], sets: "5x15", week: 3, color: "#6bcf7f" },
-    { day: 21, name: "استرخاء", type: "rest", exercises: ["يوغا"], sets: "40min", week: 3, color: "#95e1d3" },
+    // Week 3: The Hardening (4 Sessions/Day)
+    { day: 15, name: "اليوم 15", session1: "06:00 - 8km Run", session2: "12:00 - Calisthenics: 10 Rounds", session3: "17:00 - Tabata Burpees", session4: "21:00 - Full Body Stretch", week: 3, color: "#fb923c", sessions: 4 },
+    { day: 16, name: "اليوم 16", session1: "06:00 - 8km Run", session2: "12:00 - 150 Pullups", session3: "17:00 - HIIT Circuit", session4: "21:00 - Stretch", week: 3, color: "#fb923c", sessions: 4 },
+    { day: 17, name: "اليوم 17", session1: "06:00 - 10km Run", session2: "12:00 - 300 Pushups", session3: "17:00 - Burpees/Lunges", session4: "21:00 - Yoga", week: 3, color: "#fb923c", sessions: 4 },
+    { day: 18, name: "اليوم 18", session1: "06:00 - 8km Run", session2: "12:00 - 200 Dips", session3: "17:00 - Core Destruction", session4: "21:00 - Stretch", week: 3, color: "#fb923c", sessions: 4 },
+    { day: 19, name: "اليوم 19", session1: "06:00 - 12km Run", session2: "12:00 - 500 Squats", session3: "17:00 - HIIT", session4: "21:00 - Foam Roll", week: 3, color: "#fb923c", sessions: 4 },
+    { day: 20, name: "اليوم 20", session1: "06:00 - Ruck 10km (15kg)", session2: "12:00 - 400 Pushups", session3: "17:00 - Full Body Circuit", session4: "21:00 - Stretch", week: 3, color: "#fb923c", sessions: 4 },
+    { day: 21, name: "راحة كاملة", session1: "FULL REST", session2: "Recovery", week: 3, color: "#95e1d3", sessions: 0 },
     
-    // الأسبوع 4: البرو
-    { day: 22, name: "صدر المحترف", type: "push", exercises: ["Push-ups", "Dips"], sets: "6x20", week: 4, color: "#4ecdc4" },
-    { day: 23, name: "بطن فولاذي", type: "core", exercises: ["Plank", "Leg Raises"], sets: "6x60s", week: 4, color: "#4ecdc4" },
-    { day: 24, name: "HIIT برو", type: "cardio", exercises: ["Mountain Climbers"], sets: "30min", week: 4, color: "#4ecdc4" },
-    { day: 25, name: "أرجل أسطورية", type: "legs", exercises: ["Squats", "Lunges"], sets: "6x25", week: 4, color: "#4ecdc4" },
-    { day: 26, name: "أذرع ضخمة", type: "arms", exercises: ["Bicep Curls"], sets: "6x25", week: 4, color: "#4ecdc4" },
-    { day: 27, name: "تحدي نهائي", type: "full", exercises: ["الكل"], sets: "6x20", week: 4, color: "#4ecdc4" },
-    { day: 28, name: "تتويج", type: "rest", exercises: ["احتفل!"], sets: "🎉", week: 4, color: "#ffd93d" }
+    // Week 4: Expert Status (5 Sessions/Day - The Hell Week)
+    { day: 22, name: "الجحيم 1", session1: "05:00 - 10km Run", session2: "09:00 - 300 Pushups + 100 Pullups", session3: "13:00 - 30min Jump Rope", session4: "17:00 - 400m Lunges", session5: "21:00 - Ice Bath + Stretch", week: 4, color: "#ef4444", sessions: 5 },
+    { day: 23, name: "الجحيم 2", session1: "05:00 - 12km Run", session2: "09:00 - 400 Pushups", session3: "13:00 - Boxing Shadow", session4: "17:00 - 500 Squats", session5: "21:00 - Stretch", week: 4, color: "#ef4444", sessions: 5 },
+    { day: 24, name: "الجحيم 3", session1: "05:00 - 8km Run", session2: "09:00 - 200 Burpees", session3: "13:00 - 100 Dips", session4: "17:00 - 15min Plank", session5: "21:00 - Recovery", week: 4, color: "#ef4444", sessions: 5 },
+    { day: 25, name: "الجحيم 4", session1: "05:00 - Ruck 15km (20kg)", session2: "09:00 - 500 Pushups", session3: "13:00 - Core Circuit", session4: "17:00 - 300 Lunges", session5: "21:00 - Ice Bath", week: 4, color: "#ef4444", sessions: 5 },
+    { day: 26, name: "الجحيم 5", session1: "05:00 - 15km Run", session2: "09:00 - 300 Pullups", session3: "13:00 - HIIT 40min", session4: "17:00 - 600 Squats", session5: "21:00 - Stretch", week: 4, color: "#ef4444", sessions: 5 },
+    { day: 27, name: "الجحيم 6", session1: "05:00 - 20km Run", session2: "09:00 - 500 Burpees", session3: "13:00 - Full Body", session4: "17:00 - Max Reps", session5: "21:00 - Recovery", week: 4, color: "#ef4444", sessions: 5 },
+    { day: 28, name: "اليوم 28", session1: "05:00 - 10km Easy", session2: "09:00 - Light Workout", session3: "13:00 - Mobility", session4: "17:00 - Stretch", week: 4, color: "#fbbf24", sessions: 4 },
+    
+    // Final Test
+    { day: 29, name: "الاستعداد", session1: "Light Jog", session2: "Stretching", session3: "Mental Prep", week: 5, color: "#a855f7", sessions: 2 },
+    { day: 30, name: "🏆 الاختبار النهائي", session1: "15km RUN أو 1000 Burpees", session2: "FOR TIME!", week: 5, color: "#fbbf24", sessions: 1, isFinal: true }
 ];
 
 // 🏆 الإنجازات
 const achievements = [
     { id: 1, icon: "🌟", title: "البداية", desc: "أكمل أول يوم", condition: (s) => s.completedDays.length >= 1 },
-    { id: 2, icon: "🔥", title: "على النار", desc: "أكمل 7 أيام", condition: (s) => s.completedDays.length >= 7 },
-    { id: 3, icon: "💪", title: "صانع العضلات", desc: "أكمل 15 يوم", condition: (s) => s.completedDays.length >= 15 },
-    { id: 4, icon: "🏆", title: "المحترف", desc: "أكمل 28 يوم", condition: (s) => s.completedDays.length >= 28 },
-    { id: 5, icon: "⚡", title: "البرق", desc: "5 أيام متتالية", condition: (s) => s.streak >= 5 },
-    { id: 6, icon: "🎯", title: "المنضبط", desc: "10 أيام متتالية", condition: (s) => s.streak >= 10 }
+    { id: 2, icon: "🔥", title: "الأسبوع 1", desc: "أكمل 7 أيام", condition: (s) => s.completedDays.length >= 7 },
+    { id: 3, icon: "💪", title: "الأسبوع 2", desc: "أكمل 14 يوم", condition: (s) => s.completedDays.length >= 14 },
+    { id: 4, icon: "⚡", title: "الأسبوع 3", desc: "أكمل 21 يوم", condition: (s) => s.completedDays.length >= 21 },
+    { id: 5, icon: "🎯", title: "الجحيم", desc: "أكمل الأسبوع 4", condition: (s) => s.completedDays.length >= 28 },
+    { id: 6, icon: "🏆", title: "المحترف", desc: "أكمل الاختبار النهائي!", condition: (s) => s.completedDays.includes(30) }
 ];
 
 // 💾 حالة التطبيق
@@ -219,11 +193,13 @@ const state = {
     totalWorkouts: parseInt(localStorage.getItem('freegym_workouts') || '0'),
     totalMinutes: parseInt(localStorage.getItem('freegym_minutes') || '0'),
     streak: parseInt(localStorage.getItem('freegym_streak') || '0'),
-    lastWorkout: localStorage.getItem('freegym_last')
+    lastWorkout: localStorage.getItem('freegym_last'),
+    darkMode: localStorage.getItem('freegym_theme') !== 'light'
 };
 
 // ===== Initialization =====
 document.addEventListener('DOMContentLoaded', () => {
+    applyTheme();
     showLoadingScreen();
     initCanvas();
     renderExercises();
@@ -234,9 +210,21 @@ document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
     animateNumbers();
     
-    // Hide loading after 1.5s
     setTimeout(hideLoadingScreen, 1500);
 });
+
+// ===== Theme Toggle =====
+function toggleTheme() {
+    state.darkMode = !state.darkMode;
+    localStorage.setItem('freegym_theme', state.darkMode ? 'dark' : 'light');
+    applyTheme();
+}
+
+function applyTheme() {
+    document.body.classList.toggle('light-mode', !state.darkMode);
+    const btn = document.getElementById('theme-toggle');
+    if (btn) btn.textContent = state.darkMode ? '☀️' : '🌙';
+}
 
 // ===== Loading Screen =====
 function showLoadingScreen() {
@@ -245,7 +233,8 @@ function showLoadingScreen() {
     loading.innerHTML = `
         <div class="loading-content">
             <div class="loading-logo">💪</div>
-            <div class="loading-text">FreeGym</div>
+            <div class="loading-text">Zero to Expert</div>
+            <div class="loading-sub">برنامج التحول الشامل</div>
             <div class="loading-bar"><div class="loading-progress"></div></div>
         </div>
     `;
@@ -260,7 +249,7 @@ function hideLoadingScreen() {
     }
 }
 
-// ===== Canvas Background =====
+// ===== Canvas =====
 function initCanvas() {
     const canvas = document.getElementById('bg-canvas');
     if (!canvas) return;
@@ -305,7 +294,9 @@ function initCanvas() {
             
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(0, 212, 255, ${p.alpha})`;
+            ctx.fillStyle = state.darkMode 
+                ? `rgba(0, 212, 255, ${p.alpha})`
+                : `rgba(0, 100, 200, ${p.alpha})`;
             ctx.fill();
         });
         
@@ -341,7 +332,6 @@ function renderExercises(filter = 'all') {
         </div>
     `).join('');
     
-    // Trigger animations
     setTimeout(() => {
         document.querySelectorAll('.exercise-card').forEach(card => {
             card.classList.add('animate-in');
@@ -355,16 +345,17 @@ function renderProgram() {
     
     grid.innerHTML = program.map(day => {
         const isCompleted = state.completedDays.includes(day.day);
-        const weekNames = ['', 'الأسبوع 1', 'الأسبوع 2', 'الأسبوع 3', 'الأسبوع 4'];
+        const weekNames = ['', 'الأسبوع 1', 'الأسبوع 2', 'الأسبوع 3', 'الأسبوع 4', 'الاختبار'];
+        const sessionText = day.sessions === 0 ? 'راحة' : `${day.sessions} جلسات`;
         
         return `
-            <div class="day-cell ${isCompleted ? 'completed' : ''} ${day.type === 'rest' ? 'rest-day' : ''}" 
+            <div class="day-cell ${isCompleted ? 'completed' : ''} ${day.isFinal ? 'final-day' : ''} ${day.sessions === 0 ? 'rest-day' : ''}" 
                  onclick="toggleDay(${day.day})"
-                 style="--day-color: ${day.color}"
-                 title="${day.name}">
+                 style="--day-color: ${day.color}">
                 <div class="day-week">${weekNames[day.week]}</div>
                 <span class="day-num">${day.day}</span>
                 <span class="day-name">${day.name}</span>
+                <span class="day-sessions">${sessionText}</span>
                 ${isCompleted ? '<div class="day-check">✓</div>' : ''}
             </div>
         `;
@@ -408,7 +399,7 @@ function updateProgress() {
     if (!circle || !percentEl) return;
     
     const completed = state.completedDays.length;
-    const percentage = (completed / 28) * 100;
+    const percentage = (completed / 30) * 100;
     const circumference = 339.292;
     const offset = circumference - (percentage / 100) * circumference;
     
@@ -416,7 +407,7 @@ function updateProgress() {
     percentEl.textContent = Math.round(percentage) + '%';
 }
 
-// ===== Modal Functions =====
+// ===== Modal =====
 function openModal(id) {
     const ex = exercises.find(e => e.id === id);
     if (!ex) return;
@@ -424,7 +415,6 @@ function openModal(id) {
     const modal = document.getElementById('exercise-modal');
     const video = document.getElementById('modal-video');
     
-    // Set content
     document.getElementById('modal-tag').textContent = ex.muscleAr;
     document.getElementById('modal-title').textContent = ex.name;
     document.getElementById('modal-subtitle').textContent = ex.nameEn;
@@ -432,7 +422,6 @@ function openModal(id) {
     document.getElementById('modal-muscle').textContent = ex.muscleAr;
     document.getElementById('modal-desc').textContent = ex.description;
     
-    // Steps
     const stepsList = document.getElementById('modal-steps-list');
     if (stepsList) {
         stepsList.innerHTML = ex.steps.map((step, i) => `
@@ -443,14 +432,12 @@ function openModal(id) {
         `).join('');
     }
     
-    // Video - IMPORTANT: Use proper path
     if (video) {
         video.src = ex.video;
         video.load();
         video.play().catch(e => console.log('Auto-play prevented'));
     }
     
-    // Show modal
     if (modal) {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -472,34 +459,30 @@ function closeModal() {
     }
 }
 
-// ===== Program Functions =====
+// ===== Program Toggle =====
 function toggleDay(dayNum) {
     const index = state.completedDays.indexOf(dayNum);
     const dayData = program.find(p => p.day === dayNum);
     
     if (index > -1) {
-        // Uncomplete
         state.completedDays.splice(index, 1);
-        state.totalWorkouts = Math.max(0, state.totalWorkouts - dayData.exercises.length);
-        state.totalMinutes = Math.max(0, state.totalMinutes - 30);
+        state.totalWorkouts = Math.max(0, state.totalWorkouts - (dayData.sessions || 0));
+        state.totalMinutes = Math.max(0, state.totalMinutes - (dayData.sessions * 30));
     } else {
-        // Complete
         state.completedDays.push(dayNum);
         state.completedDays.sort((a, b) => a - b);
-        state.totalWorkouts += dayData.exercises.length;
-        state.totalMinutes += 30;
+        state.totalWorkouts += (dayData.sessions || 0);
+        state.totalMinutes += (dayData.sessions * 30);
         updateStreak();
         showConfetti(event.target);
     }
     
-    // Save
     localStorage.setItem('freegym_days', JSON.stringify(state.completedDays));
     localStorage.setItem('freegym_workouts', state.totalWorkouts);
     localStorage.setItem('freegym_minutes', state.totalMinutes);
     localStorage.setItem('freegym_streak', state.streak);
     localStorage.setItem('freegym_last', new Date().toISOString());
     
-    // Update UI
     renderProgram();
     renderAchievements();
     updateStats();
@@ -558,7 +541,6 @@ function showConfetti(element) {
 
 // ===== Event Listeners =====
 function setupEventListeners() {
-    // Filter tabs
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -567,7 +549,6 @@ function setupEventListeners() {
         });
     });
     
-    // Modal close
     const closeBtn = document.querySelector('.modal-close');
     const overlay = document.querySelector('.modal-overlay');
     
@@ -578,7 +559,6 @@ function setupEventListeners() {
         if (e.key === 'Escape') closeModal();
     });
     
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -589,14 +569,10 @@ function setupEventListeners() {
         });
     });
     
-    // Nav scroll effect
     window.addEventListener('scroll', () => {
         const nav = document.querySelector('.navbar');
-        if (nav) {
-            nav.classList.toggle('scrolled', window.scrollY > 50);
-        }
+        if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
         
-        // Active section
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-item');
         
@@ -615,6 +591,10 @@ function setupEventListeners() {
             }
         });
     }, { passive: true });
+    
+    // Theme toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
 }
 
 // ===== Animations =====
@@ -652,3 +632,4 @@ function animateNumber(element, target) {
 window.openModal = openModal;
 window.closeModal = closeModal;
 window.toggleDay = toggleDay;
+window.toggleTheme = toggleTheme;
