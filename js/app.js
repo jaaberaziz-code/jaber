@@ -1,6 +1,6 @@
 // ===== FreeGym Zero to Expert - Ultimate Endurance Protocol =====
 
-// 🎯 تمارين جديدة للبرنامج القوي
+// 🎯 تمارين - غير 3 فيديوهات كاينين (bicep, plank, squat)
 const exercises = [
     {
         id: 1,
@@ -12,6 +12,7 @@ const exercises = [
         difficultyAr: "سهل",
         description: "تمرين أساسي للصدر والأكتاف والترايسبس.",
         video: "./videos/squat.mp4",
+        hasVideo: false, // فيديو تجريبي
         icon: "💪",
         steps: ["استلقِ على بطنك", "ادفع جسمك للأعلى", "انزل ببطء", "كرر 10-15 مرة"]
     },
@@ -25,6 +26,7 @@ const exercises = [
         difficultyAr: "سهل",
         description: "تمرين ثبات للبطن والظهر.",
         video: "./videos/plank.mp4",
+        hasVideo: true, // ✅ فيديو حقيقي
         icon: "🎯",
         steps: ["استند على الساعدين", "حافظ على استقامة الجسم", "شد البطن", "استمر 30-60 ثانية"]
     },
@@ -38,6 +40,7 @@ const exercises = [
         difficultyAr: "سهل",
         description: "ملك تمارين الأرجل.",
         video: "./videos/squat.mp4",
+        hasVideo: true, // ✅ فيديو حقيقي
         icon: "🦵",
         steps: ["قف بعرض الكتفين", "انزل كأنك تجلس", "ادر للأعلى", "كرر 15-20 مرة"]
     },
@@ -51,6 +54,7 @@ const exercises = [
         difficultyAr: "متوسط",
         description: "جري للتحمل والقلب.",
         video: "./videos/squat.mp4",
+        hasVideo: false,
         icon: "🏃",
         steps: ["ابدأ ببطء", "حافظ على إيقاع", "تنفس بشكل منتظم", "زود السرعة تدريجياً"]
     },
@@ -64,6 +68,7 @@ const exercises = [
         difficultyAr: "صعب",
         description: "تمرين متكامل قوي جداً.",
         video: "./videos/squat.mp4",
+        hasVideo: false,
         icon: "🔥",
         steps: ["قف مستقيماً", "انزل لوضعية الضغط", "ادفع واقفز", "كرر بسرعة"]
     },
@@ -77,6 +82,7 @@ const exercises = [
         difficultyAr: "صعب",
         description: "تمرين قوي للظهر.",
         video: "./videos/bicep.mp4",
+        hasVideo: false, // فيديو تجريبي (bicep ماشي pullups)
         icon: "🔙",
         steps: ["امسك العقلة", "اسحب جسمك للأعلى", "انزل ببطء", "كرر 5-10 مرات"]
     },
@@ -90,6 +96,7 @@ const exercises = [
         difficultyAr: "متوسط",
         description: "للصدر السفلي والترايسبس.",
         video: "./videos/squat.mp4",
+        hasVideo: false,
         icon: "📉",
         steps: ["ضع يديك على حافة", "انزل بثني المرفقين", "ادفع للأعلى", "كرر 8-12 مرة"]
     },
@@ -103,6 +110,7 @@ const exercises = [
         difficultyAr: "سهل",
         description: "للأرجل والتوازن.",
         video: "./videos/squat.mp4",
+        hasVideo: false,
         icon: "🚶",
         steps: ["خطوة للأمام", "انزل للأسفل", "ادر للأعلى", "بدل الأرجل"]
     },
@@ -116,6 +124,7 @@ const exercises = [
         difficultyAr: "متوسط",
         description: "للتحمل والتنسيق.",
         video: "./videos/plank.mp4",
+        hasVideo: false,
         icon: "➰",
         steps: ["امسك الحبل", "اقفز بإيقاع", "حافظ على السرعة", "استمر 5-10 دقائق"]
     },
@@ -129,6 +138,7 @@ const exercises = [
         difficultyAr: "متوسط",
         description: "مشي مع حقيبة ثقيلة.",
         video: "./videos/squat.mp4",
+        hasVideo: false,
         icon: "🎒",
         steps: ["ضع حقيبة 5-10kg", "امشِ بخطوات ثابتة", "حافظ على وضعية مستقيمة", "استمر 30-60 دقيقة"]
     }
@@ -312,13 +322,19 @@ function renderExercises(filter = 'all') {
     
     const filtered = filter === 'all' ? exercises : exercises.filter(e => e.muscle === filter);
     
-    grid.innerHTML = filtered.map((ex, i) => `
-        <div class="exercise-card" onclick="openModal(${ex.id})" style="animation-delay: ${i * 0.1}s">
+    grid.innerHTML = filtered.map((ex, i) => {
+        // إذا عندو فيديو حقيقي، نبين "شاهد الفيديو"
+        // إذا ماشي فيديو حقيقي، نبين "فيديو تجريبي" ولا غير الأيقونة
+        const videoLabel = ex.hasVideo ? 'شاهد الفيديو' : 'فيديو تجريبي';
+        const videoClass = ex.hasVideo ? 'has-video' : 'demo-video';
+        
+        return `
+        <div class="exercise-card ${videoClass}" onclick="openModal(${ex.id})" style="animation-delay: ${i * 0.1}s">
             <div class="exercise-thumb">
                 <span class="thumb-icon">${ex.icon}</span>
                 <div class="play-overlay">
                     <span class="play-btn">▶</span>
-                    <span class="play-text">شاهد الفيديو</span>
+                    <span class="play-text">${videoLabel}</span>
                 </div>
             </div>
             <div class="exercise-info">
@@ -330,7 +346,8 @@ function renderExercises(filter = 'all') {
                 <p class="exercise-en">${ex.nameEn}</p>
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
     
     setTimeout(() => {
         document.querySelectorAll('.exercise-card').forEach(card => {
