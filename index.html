@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaber - برنامج رياضي</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🏋️‍♂️ Jaber Gym</h1>
+        <nav>
+            <a href="#exercises">التمارين</a>
+            <a href="#program">البرنامج</a>
+            <a href="#progress">التقدم</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- تمارين -->
+        <section id="exercises">
+            <h2>📋 تمارين رياضية</h2>
+            <div class="filters">
+                <button onclick="filterExercises('all')">الكل</button>
+                <button onclick="filterExercises('chest')">صدر</button>
+                <button onclick="filterExercises('back')">ظهر</button>
+                <button onclick="filterExercises('legs')">أرجل</button>
+                <button onclick="filterExercises('core')">بطن</button>
+            </div>
+            <div id="exercises-list" class="grid"></div>
+        </section>
+
+        <!-- برنامج 30 يوم -->
+        <section id="program">
+            <h2>📅 برنامج 30 يوم</h2>
+            <div id="program-list" class="program-grid"></div>
+        </section>
+
+        <!-- تتبع -->
+        <section id="progress">
+            <h2>📊 تتبع التقدم</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <span id="days-completed">0</span>
+                    <label>أيام مكتملة</label>
+                </div>
+                <div class="stat-card">
+                    <span id="total-workouts">0</span>
+                    <label>تمارين</label>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>💪 By Jaber | برنامج رياضي متكامل</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

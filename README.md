@@ -1,2 +1,35 @@
-# jaber
-Project by Jaber - Gym exercises and workout program
+# Jaber - Gym Exercises & Workout Program
+
+## 🏋️‍♂️ مشروع رياضي متكامل
+
+هاد المشروع كيحتوي على:
+- 📋 تمارين رياضية (Calisthenics & Gym)
+- 📅 برنامج تدريبي 30 يوم
+- 📊 تتبع التقدم
+
+## 🚀 التقنيات
+
+- HTML5 / CSS3 / JavaScript
+- Responsive Design
+- Local Storage للحفظ
+
+## 📁 Structure
+
+```
+jaber/
+├── index.html          # الصفحة الرئيسية
+├── css/
+│   └── style.css       # التصميم
+├── js/
+│   └── app.js          # المنطق
+├── data/
+│   └── exercises.json  # تمارين
+└── README.md
+```
+
+## 🏃‍♂️ البدء
+
+افتح `index.html` فالمتصفح.
+
+---
+**By Jaber** 💪
